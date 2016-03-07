@@ -3,18 +3,18 @@
 <!ELEMENT schedule (days)>
 <!ATTLIST schedule term (1|2|3|4) #REQUIRED>
 
-<!ELEMENT days (weekday)>
+<!ELEMENT days (weekday)*>
 
 <!ELEMENT weekday (classinfo)*>
 <!ATTLIST weekday day (monday|tuesday|wednesday|thursday|friday) #REQUIRED>
 
-<!ELEMENT classinfo (room, buidling, time?, instructor, type, number?)>
-<!ELEMENT room (#PCDATA)>
-<!ELEMENT building (#PCDATA)>
-<!ELEMENT time (#PCDATA)>
-<!ELEMENT instructor (#PCDATA)>
+<!ELEMENT classinfo (type, buidling, room, instructor, time?, class?)>
 <!ELEMENT type (#PCDATA)>
-<!ELEMENT number (#PCDATA)>
+<!ELEMENT building (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT instructor (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT class (#PCDATA)>
 
 <!ELEMENT timeblock (classinfo)*>
 <!ATTLIST timeblock classtime (8:30|9:30|10:30|11:30|12:30|1:30|2:30|3:30|4:30)>
